@@ -5,4 +5,4 @@ megastreamhub_key.pem
 static/
 venv/
 media_dir/
-
+copy_to_aws
