@@ -26,9 +26,9 @@ def chuchotage():
 def neighbours():
     return render_template('neighbours.html')
 
-@app.route('/assassin')
-def assassin():
-    return render_template('assassin.html')
+@app.route('/feast')
+def feast():
+    return render_template('feast.html')
 
 
 if __name__ == "__main__":
