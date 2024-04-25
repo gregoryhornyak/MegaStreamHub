@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return render_template('menu.html')
+    return render_template("menu.html")
 
 @app.route('/barber')
 def barber():
@@ -18,3 +18,5 @@ def cosmos():
 def coffee():
     return render_template('coffee.html')
 
+if __name__ == "__main__":
+    app.run()
