@@ -14,9 +14,22 @@ def barber():
 def cosmos():
     return render_template('cosmos.html')
 
-@app.route('/coffee')
-def coffee():
-    return render_template('coffee.html')
+@app.route('/sprite')
+def sprite():
+    return render_template('sprite.html')
+
+@app.route('/chuchotage')
+def chuchotage():
+    return render_template('chuchotage.html')
+
+@app.route('/neighbours')
+def neighbours():
+    return render_template('neighbours.html')
+
+@app.route('/assassin')
+def assassin():
+    return render_template('assassin.html')
+
 
 if __name__ == "__main__":
     app.run()
