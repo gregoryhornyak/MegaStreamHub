@@ -6,9 +6,9 @@ app = Flask(__name__)
 def hello_world():
     return render_template("menu.html")
 
-@app.route('/barber')
-def barber():
-    return render_template('barber.html')
+@app.route('/the_egg')
+def the_egg():
+    return render_template('the_egg.html')
 
 @app.route('/cosmos')
 def cosmos():
