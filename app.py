@@ -30,6 +30,16 @@ def neighbours():
 def feast():
     return render_template('feast.html')
 
+@app.route('/map')
+def map_finder():
+    return render_template('budapest_map.html')
+
+@app.route('/fideszcoin')
+def fideszcoin():
+    return render_template('fideszcoin.html')
+
+
+
 
 if __name__ == "__main__":
     app.run()
