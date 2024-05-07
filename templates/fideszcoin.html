@@ -1,16 +1,81 @@
 <!DOCTYPE html> 
 <html> 
-    <body style="background-color:black;"> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <head>
+    <style>
+      .button {
+        background-color: orangered; /* Green */
+        border: none;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 24px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 12px;
+      }
+      .backg {
+        background: #2C3E50;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+    </style>
+  </head>
+    <body class="backg"> 
 
-    <div style="color: orangered;">
-        <center>
+    <div style="color: #ff4500;">
+        <center> 
             <h1>FIDESZ COIN</h1>
         </center>
           <h2 style="font-family: 'Courier New', Courier, monospace;"> 1 FC = 6900 HUF </h2>
-          <h2> BUY</h2>
-          <h2> SELL</h2>
-          <img src="https://img.freepik.com/free-vector/global-business-background-with-stock-chart-blue-tone_53876-119546.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+          <div class="button">
+            <b>BUY</b>
+          </div>
+          <div class="button">
+            <b>SELL</b>
+          </div>
+          <div style="font-size: medium; font-style: normal; background-color: rgb(0, 0, 0); padding: 15px;margin: 10px 5px 5px 10px; width: 10%; border-radius: 20%;">
+            <b>
+              <p style="color: gold;">BitCoin</p>
+              <p style="color: orangered;">FideszCoin</p>
+              <p style="color: blue;">DollárBaloldal</p>
+            </b>
+          </div>
+          <canvas id="myChart" style="width:100%"></canvas>
     </div>
 
   </body> 
 </html>
+
+
+
+<script>
+const xValues = [2000,2002,2004,2007,2010,2013,2016,2018,2020,2024];
+//Chart.defaults.font.color = "#ffffff";
+new Chart("myChart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{ 
+      data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+      borderColor: "blue",
+      fill: false,
+    }, { 
+      data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,6900],
+      borderColor: "orangered",
+      fill: false
+    }, { 
+      data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+      borderColor: "yellow",
+      fill: false
+    }]
+  },
+  options: {
+    legend: {
+      display: false
+    }
+  }
+});
+</script>
